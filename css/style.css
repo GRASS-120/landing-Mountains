@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,400&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+.all {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  color: #36AEEA;
+  color: #95A5AD;
+  color: #9DAEB6;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  height: 680px;
+  background-image: url(../img_new/96462.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.header .navbar {
+  width: 100%;
+  height: 85px;
+  background: rgba(250, 250, 250, 0.3);
+  transition: 0.3s all;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .navbar_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: show_header 0.5s;
+  background-color: #fff;
+}
+
+@keyframes show_header {
+  0% {
+    opacity: 0;
+    top: -100px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.header__logo p {
+  margin: 0;
+  font-size: 29px;
+  font-weight: regular;
+  color: #95A5AD;
+  cursor: pointer;
+}
+
+.header__logo p span {
+  color: #36AEEA;
+}
+
+.header__menu {
+  width: auto;
+  padding: 0 23vw 0 0;
+}
+
+.header__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 21px;
+  padding-left: 0;
+}
+
+.header__list li a {
+  font-size: 12px;
+  font-weight: bold;
+  color: #9DAEB6;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  padding: 0 10px 0 10px;
+  position: relative;
+}
+
+.header__list li a::after {
+  display: block;
+  position: absolute;
+  left: 10%;
+  width: 0;
+  height: 2px;
+  background-color: #36AEEA;
+  content: "";
+  transition: width 0.2s ease-out;
+}
+
+.header__list li a:hover::after {
+  width: 80%;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__button button {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #36AEEA;
+  height: 45px;
+  width: 150px;
+  background-color: transparent;
+  border: 2px solid #36AEEA;
+  outline: none;
+  transition: 0.2s all;
+}
+
+.header__button button:focus, .header__button button:active {
+  outline: none;
+}
+
+.header__button button:hover {
+  background-color: #36AEEA;
+  color: white;
+}
