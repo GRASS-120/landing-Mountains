@@ -137,6 +137,8 @@ p {
                 }
         
                 &:hover{
+                    color: #36AEEA;
+                    
                     &::after{
                         width: 80%;
                     }
@@ -199,6 +201,47 @@ p {
     }
 
     @media (max-width: 770px) {
+        .container{
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .navbar{
+            .container{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: row;
+            }
+        }
+
+
+        .header__list{
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            li {
+                padding: 75px 25px 0 25px;
+
+                a {
+                    @include text(22px, bold, #9DAEB6);
+
+                    &:focus {
+                        color: #36AEEA;
+                    }
+                }
+
+            }
+        }
+
+        .header__link {
+            margin-top: 20px;
+        }
+
+
         .header__burger {
             display: block;
             position: relative;
