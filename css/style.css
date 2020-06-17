@@ -802,6 +802,7 @@ p {
     font-size: 10px;
     font-weight: bold;
     color: white;
+    border-radius: 5px;
   }
   .offer__title {
     font-size: 18px;
@@ -854,6 +855,7 @@ p {
 .scheme__numbers-list {
   display: flex;
   justify-content: space-around;
+  position: relative;
 }
 
 .scheme__number {
@@ -870,6 +872,8 @@ p {
   color: #36AEEA;
   margin-top: 45px;
   margin-bottom: 35px;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .scheme__elements {
@@ -877,6 +881,18 @@ p {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  position: relative;
+}
+
+.scheme__elements::after {
+  display: block;
+  width: 800px;
+  border-top: 2px dashed #F6F4F4;
+  content: '';
+  position: absolute;
+  top: 14%;
+  left: 14%;
+  z-index: 1;
 }
 
 .scheme__item {
@@ -885,8 +901,20 @@ p {
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
+  position: relative;
   width: 210px;
   height: auto;
+}
+
+.scheme__item::after {
+  display: block;
+  border-right: 2px dashed #F6F4F4;
+  height: 100px;
+  content: '';
+  position: absolute;
+  top: 14%;
+  left: calc(50% - 2px);
+  z-index: 1;
 }
 
 .scheme__circle {
@@ -899,6 +927,7 @@ p {
   height: 180px;
   border-radius: 50%;
   background-color: #F0F3F6;
+  z-index: 2;
 }
 
 .scheme__icon {
@@ -954,4 +983,159 @@ p {
   font-size: 16px;
   font-weight: regular;
   color: #333;
+}
+
+@media (max-width: 1200px) {
+  .scheme__elements::after {
+    width: 700px;
+  }
+}
+
+@media (max-width: 990px) {
+  .scheme__elements::after {
+    display: none;
+  }
+}
+
+.travel {
+  width: 100%;
+  height: auto;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url(../img_new/Group.png);
+  background-size: 100% 75%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.travel__header {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.travel__list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 600px;
+  background-image: url(../img_new/worldmap-dots.png);
+  background-size: 100% 75%;
+  background-repeat: no-repeat;
+}
+
+.travel__item {
+  margin-top: 75px;
+  width: 200px;
+  height: 340px;
+  background-color: grey;
+}
+
+.travel #travel__item-1 {
+  background-image: url(../img_new/travel-1.png);
+  background-size: 100% 100%;
+}
+
+.travel #travel__item-2 {
+  background-image: url(../img_new/travel-2.png);
+  background-size: 100% 100%;
+}
+
+.travel #travel__item-3 {
+  background-image: url(../img_new/travel-3.png);
+  background-size: 100% 100%;
+}
+
+.travel #travel__item-4 {
+  background-image: url(../img_new/travel-4.png);
+  background-size: 100% 100%;
+}
+
+.travel #travel__item-5 {
+  background-image: url(../img_new/travel-5.png);
+  background-size: 100% 100%;
+}
+
+.travel__stars {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.travel__stars img {
+  height: 35px;
+  width: auto;
+}
+
+.travel__title {
+  padding: 65px 15px 0 15px;
+  font-size: 28px;
+  font-weight: regular;
+  color: white;
+}
+
+.travel__text {
+  padding: 0 15px 0 15px;
+  font-size: 16px;
+  font-weight: regular;
+  color: white;
+}
+
+.travel__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 0 15px;
+  height: 75px;
+  width: 100%;
+}
+
+.travel__price-old {
+  font-size: 18px;
+  font-weight: regular;
+  color: white;
+}
+
+.travel__prive-new {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .travel {
+    background-size: 100% 50%;
+  }
+  .travel__list {
+    background-size: 100% 50%;
+  }
+}
+
+@media (max-width: 770px) {
+  .travel {
+    background-size: 100% 25%;
+  }
+  .travel__list {
+    background-size: 100% 25%;
+    padding-bottom: 250px;
+  }
+}
+
+@media (max-width: 770px) {
+  .travel__list {
+    background-repeat: repeat;
+  }
+}
+
+@media (max-width: 430px) {
+  .travel {
+    background-size: 100% 15%;
+  }
+  .travel__list {
+    justify-content: center;
+    background-size: 115% 15%;
+  }
 }

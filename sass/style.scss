@@ -829,6 +829,7 @@ p {
                 width: 105px;
                 height: 40px;
                 @include text(10px, bold, white);
+                border-radius: 5px;
             }
         }
 
@@ -869,9 +870,6 @@ p {
     font-family: 'Roboto', sans-serif;
     margin-bottom: 90px;
 
-    &__block {
-    }
-
     &__header {
         margin-top: 100px;
         margin-bottom: 70px;
@@ -883,6 +881,7 @@ p {
     &__numbers-list {
         display: flex;
         justify-content: space-around;
+        position: relative;
     }
 
     &__number {
@@ -897,6 +896,8 @@ p {
         @include text(16px, bold, #36AEEA);
         margin-top: 45px;
         margin-bottom: 35px;
+        background-color: #fff;
+        z-index: 2;
     }
 
     &__elements {
@@ -904,6 +905,18 @@ p {
         align-items: center;
         justify-content: space-around;
         flex-wrap: wrap;
+        position: relative;
+
+        &::after {
+            display: block;
+            width: 800px;
+            border-top: 2px dashed #F6F4F4;
+            content: '';
+            position: absolute;
+            top: 14%;
+            left: 14%;
+            z-index: 1;
+        }
     }
 
     &__item {
@@ -912,8 +925,20 @@ p {
         justify-content: space-around;
         flex-wrap: wrap;
         text-align: center;
+        position: relative;
         width: 210px;
         height: auto;
+
+        &::after {
+            display: block;
+            border-right: 2px dashed #F6F4F4;
+            height: 100px;
+            content: '';
+            position: absolute;
+            top: 14%;
+            left: calc(50% - 2px);
+            z-index: 1;
+        }
     }
 
     &__circle {
@@ -926,6 +951,7 @@ p {
         height: 180px;
         border-radius: 50%;
         background-color: #F0F3F6;
+        z-index: 2;
     }
 
     &__icon {
@@ -977,5 +1003,145 @@ p {
     &__text {
         @include text(16px, regular, #333);
     }
+
+    @media (max-width: 1200px) {
+        &__elements {
+            &::after {
+                width: 700px;
+            }
+        }
+    }
+
+    @media (max-width: 990px) {
+        &__elements {
+            &::after {
+                display: none;
+            }
+        }
+    }
 }
+
+// ! Travel
+
+.travel {
+    width: 100%;
+    height: auto;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(../img_new/Group.png);
+    background-size: 100% 75%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    &__header {
+        margin-top: 100px;
+        text-align: center;
+        @include text(30px, bold, #333)
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 600px;
+        background-image: url(../img_new/worldmap-dots.png);
+        background-size: 100% 75%;
+        background-repeat: no-repeat;
+    }
+
+    &__item {
+        margin-top: 75px;
+        width: 200px;
+        height: 340px;
+        background-color: grey;
+    }
+
+    @for $i from 1 to 6 {
+        #travel__item-#{$i}{
+            background-image: url(../img_new/travel-#{$i}.png);
+            background-size: 100% 100%;
+        }
+    }
+
+    &__stars {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 35px;
+            width: auto;
+        }
+    }
+
+    &__title {
+        padding: 65px 15px 0 15px;
+        @include text(28px, regular, white)
+    }
+
+    &__text {
+        padding: 0 15px 0 15px;
+        @include text(16px, regular, white)
+    }
+
+    &__price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px 0 15px;
+        height: 75px;
+        width: 100%;
+    }
+
+    &__price-old {
+        @include text(18px, regular, white)
+    }
+
+    &__prive-new {
+        @include text(26px, bold, white)
+    }
+}
+
+@media (max-width: 1200px) {
+    .travel {
+        background-size: 100% 50%;
+
+        &__list {
+            background-size: 100% 50%;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .travel {
+        background-size: 100% 25%;
+
+        &__list {
+            background-size: 100% 25%;
+            padding-bottom: 250px;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .travel {
+        &__list {
+            background-repeat: repeat;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .travel {
+        background-size: 100% 15%;
+
+        &__list {
+            justify-content: center;
+            background-size: 115% 15%;
+        }
+    }
+}
+
+// ! Gallery
 
