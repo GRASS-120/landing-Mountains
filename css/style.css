@@ -1428,6 +1428,7 @@ p {
   backdrop-filter: blur(8px);
   margin: 0 auto;
   padding: 35px 30px 35px 30px;
+  transition: 0.2s;
 }
 
 .contacts__title {
