@@ -22,11 +22,11 @@
             </div>
             <div class="header__menu">
                 <ul class="header__list">
-                    <li><a href="#" class="header__link">OUR STORY</a></li>
-                    <li><a href="#" class="header__link">SERVICES</a></li>
-                    <li><a href="#" class="header__link">WORK</a></li>
-                    <li><a href="#" class="header__link">JOURNAL</a></li>
-                    <li><a href="#" class="header__link">CONTACT</a></li>
+                    <li><div href="#" class="header__link" id="header__link-journal">OUR JOURNAL</div></li>
+                    <li><div href="#" class="header__link" id="header__link-work">WORK</div></li>
+                    <li><div href="#" class="header__link" id="header__link-travel">TRAVEL</div></li>
+                    <li><div href="#" class="header__link" id="header__link-gallery">GALLERY</div></li>
+                    <li><div href="#" class="header__link" id="header__link-clients">CLIENTS</div></li>
                 </ul>
             </div>
             <div class="header__button">
@@ -83,7 +83,7 @@
     <p class="journal__header">OUR JOURNAL</p>
     <div class="journal__block">
         <div class="container">
-            <div class="journal__item-img">
+            <div class="journal__item-img wow fadeIn" data-wow-duration="2s">
                 <div class="journal__img">
                     <div class="journal__triangle-1"></div>
                     <img src="./img_new/clip-1.png" alt="">
@@ -99,7 +99,7 @@
                 <p class="journal__number">01</p>
             </div>
 
-            <div class="journal__item-img">
+            <div class="journal__item-img wow fadeIn" data-wow-duration="2s">
                 <div class="journal__img">
                     <div class="journal__triangle-2"></div>
                     <img src="./img_new/clip-2.png" alt="">
@@ -115,7 +115,7 @@
                 <p class="journal__number">02</p>
             </div>
 
-            <div class="journal__item-img">
+            <div class="journal__item-img wow fadeIn" data-wow-duration="2s">
                 <div class="journal__img">
                     <div class="journal__triangle-3"></div>
                     <img src="./img_new/clip-3.png" alt="">
@@ -137,7 +137,7 @@
 <!-- ? Offer -->
 <div class="offer">
     <div class="container">
-        <div class="offer__body">
+        <div class="offer__body wow fadeInLeft">
             <div class="offer__title"><p>DO YOU WANNA GO?</p></div>
             <div class="offer__text">
                 <p>
@@ -166,7 +166,7 @@
             <div class="scheme__elements">
                 <div class="scheme__item">
                     <div class="scheme__number">1</div>
-                    <div class="scheme__circle">
+                    <div class="scheme__circle wow flipInX" data-wow-duration="1s">
                         <div class="scheme__figure-1"></div>
                         <div class="scheme__figure-2">
                             <span class="scheme__icon"><i class="far fa-copy"></i></span>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="scheme__item">
                     <div class="scheme__number">2</div>
-                    <div class="scheme__circle">
+                    <div class="scheme__circle wow flipInX" data-wow-duration="2s">
                         <div class="scheme__figure-1"></div>
                         <div class="scheme__figure-2">
                             <span class="scheme__icon"><i class="far fa-address-card"></i></span>
@@ -198,7 +198,7 @@
                 </div>
                 <div class="scheme__item">
                     <div class="scheme__number">3</div>
-                    <div class="scheme__circle">
+                    <div class="scheme__circle wow flipInX" data-wow-duration="3s">
                         <div class="scheme__figure-1"></div>
                         <div class="scheme__figure-2">
                             <span class="scheme__icon"><i class="fas fa-book-open"></i></span>
@@ -214,7 +214,7 @@
                 </div>
                 <div class="scheme__item">
                     <div class="scheme__number">4</div>
-                    <div class="scheme__circle">
+                    <div class="scheme__circle wow flipInX" data-wow-duration="4s">
                         <div class="scheme__figure-1"></div>
                         <div class="scheme__figure-2">
                             <span class="scheme__icon"><i class="far fa-check-circle"></i></span>
@@ -241,7 +241,7 @@
         </div>
 
         <div class="travel__list">
-            <div class="travel__item" id="travel__item-1">
+            <div class="travel__item wow fadeInLeft" data-wow-duration="1s" id="travel__item-1">
                 <div class="travel__stars">
                     <img src="./img_new/stars-4.png" alt="">
                 </div>
@@ -256,7 +256,7 @@
                     <p class="travel__prive-new">$793</p>
                 </div>
             </div>
-            <div class="travel__item" id="travel__item-2">
+            <div class="travel__item wow fadeInLeft" data-wow-duration="1.5s" id="travel__item-2">
                 <div class="travel__stars">
                     <img src="./img_new/stars-5.png" alt="">
                 </div>
@@ -271,7 +271,7 @@
                     <p class="travel__prive-new">$1893</p>
                 </div>
             </div>
-            <div class="travel__item" id="travel__item-3">
+            <div class="travel__item wow fadeInLeft" data-wow-duration="2s" id="travel__item-3">
                 <div class="travel__stars">
                     <img src="./img_new/stars-5.png" alt="">
                 </div>
@@ -286,7 +286,7 @@
                     <p class="travel__prive-new">$2593</p>
                 </div>
             </div>
-            <div class="travel__item" id="travel__item-4">
+            <div class="travel__item wow fadeInLeft" data-wow-duration="2.5s" id="travel__item-4">
                 <div class="travel__stars">
                     <img src="./img_new/stars-5.png" alt="">
                 </div>
@@ -301,7 +301,7 @@
                     <p class="travel__prive-new">$2123</p>
                 </div>
             </div>
-            <div class="travel__item" id="travel__item-5">
+            <div class="travel__item wow fadeInLeft" data-wow-duration="3s" id="travel__item-5">
                 <div class="travel__stars">
                     <img src="./img_new/stars-3.png" alt="">
                 </div>
@@ -321,41 +321,145 @@
 </div>
 
 <!-- ? Gallery -->
-
 <div class="gallery">
     <div class="container">
+        <div class="gallery__header"><p>GALLERY</p></div>
         <div class="gallery__body">
-            <div class="gallery__item" id="gallery__item-1">
-                <img src="./img_new/gallery-1.png" alt="">
+
+            <div class="gallery__row-1">
+                <div class="gallery__item wow fadeIn" data-wow-duration="1s" id="gallery__item-1">
+                    <img src="./img_new/gallery-5.png" alt="">
+                </div>
+                <div class="gallery__item wow fadeIn" data-wow-duration="1.5s" id="gallery__item-2">
+                    <img src="./img_new/gallery-4.png" alt="">
+                </div>
             </div>
-            <div class="gallery__item" id="gallery__item-2">
-                <img src="./img_new/gallery-2.png" alt="">
+
+            <div class="gallery__row-2">
+                <div class="gallery__item wow fadeIn" data-wow-duration="2s" id="gallery__item-3">
+                    <img src="./img_new/gallery-2.png" alt="">
+                </div>
+                <div class="gallery__item wow fadeIn" data-wow-duration="2.5s" id="gallery__item-4">
+                    <img src="./img_new/gallery-3.png" alt="">
+                </div>
             </div>
-            <div class="gallery__item" id="gallery__item-3">
-                <img src="./img_new/gallery-3.png" alt="">
+            
+            <div class="gallery__row-3">
+                <div class="gallery__item wow fadeIn" data-wow-duration="3s" id="gallery__item-5">
+                    <img src="./img_new/gallery-1.png" alt="">
+                </div>
+                <div class="gallery__item wow fadeIn" data-wow-duration="3.5s" id="gallery__item-6">
+                    <img src="./img_new/gallery-6.png" alt="">
+                </div>
             </div>
-            <div class="gallery__item" id="gallery__item-4">
-                <img src="./img_new/gallery-4.png" alt="">
+
+        </div>
+    </div>
+</div>
+
+<!-- ? Brands -->
+<div class="brands">
+    <div class="container">
+        <div class="brands__list">
+            <div class="brands__item">
+                <img src="./img_new/Vector_Smart_Object@2x_6.png" alt="">
             </div>
-            <div class="gallery__item" id="gallery__item-5">
-                <img src="./img_new/gallery-5.png" alt="">
+            <div class="brands__item">
+                <img src="./img_new/Vector_Smart_Object@2x_5.png" alt="">
             </div>
-            <div class="gallery__item" id="gallery__item-6">
-                <img src="./img_new/gallery-6.png" alt="">
+            <div class="brands__item">
+                <img src="./img_new/Vector_Smart_Object@2x_4.png" alt="">
+            </div>
+            <div class="brands__item">
+                <img src="./img_new/Vector_Smart_Object@2x_3.png" alt="">
+            </div>
+            <div class="brands__item">
+                <img src="./img_new/Vector_Smart_Object@2x_2.png" alt="">
+            </div>
+            <div class="brands__item">
+                <img src="./img_new/Vector_Smart_Object@2x_1.png" alt="">
             </div>
         </div>
     </div>
 </div>
 
-<!-- <i class="far fa-check-circle"></i>
+<!-- ? Footer -->
+<div class="footer">
+    <!-- ? Clients -->
+    <div class="clients">
+        <div class="container">
+            <div class="clients__header"><p>OUR CLIENTS SAY</p></div>
+            <div class="clients__body">
+                <div class="clients__comment">
+                    <div class="clients__symbol"><p>"</p></div>
+                    <div class="clients__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        </p>
+                    </div>
+                    <div class="clients__author">
+                        <div class="clients__img">
+                            <img src="./img_new/author(2).png" alt="">
+                        </div>
+                        <div class="clients__person-inf"><p><span>Pavliv Yaroslav </span>Web designe</p></div>
+                    </div>
+                </div>
 
-<i class="fas fa-book-open"></i>
-
-<i class="far fa-copy"></i>
-
-<i class="far fa-address-card"></i>
-
-<i class="fas fa-user-alt"></i> -->
+                <div class="clients__comment">
+                    <div class="clients__symbol"><p>"</p></div>
+                    <div class="clients__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        </p>
+                    </div>
+                    <div class="clients__author">
+                        <div class="clients__img">
+                            <img src="./img_new/author(1).png" alt="">
+                        </div>
+                        <div class="clients__person-inf"><p><span>John Scott </span>The Fringe</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ? Contacts -->
+    <div class="contacts wow fadeInUp" data-wow-duration="2s">
+        <div class="container">
+            <div class="contacts__form">
+                <form action="">
+                    <div class="contacts__title"><p>CONTACTS</p></div>
+                    <div class="contacts__subtitle"><p>Sign up for our newsletter to receive updates</p></div>
+                    <input type="text" class="contacts__input" placeholder="Name">
+                    <input type="text" class="contacts__input" placeholder="Phone">
+                    <input type="text" class="contacts__input" placeholder="E-mail">
+                    <button class="contacts__button">SEND</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ? Footbar -->
+    <div class="footbar">
+        <div class="container">
+            <div class="footbar__body">
+                <div class="footbar__rights"><p>All rights reserved 2015</p></div>
+                <div class="footbar__soc">
+                    <div class="footbar__icon">
+                        <img src="./img_new/twitter.png" alt="">
+                    </div>
+                    <div class="footbar__icon">
+                        <img src="./img_new/facebook.png" alt="">
+                    </div>
+                    <div class="footbar__icon">
+                        <img src="./img_new/vk.png" alt="">
+                    </div>
+                </div>
+                <div class="footbar__number"><p>1 234 243 123</p></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- ! Подключение библиотек -->
 <script src="./libs/bootstrap.js"></script>
@@ -366,9 +470,13 @@
 </script>
 <script src="./libs/wow.min.js"></script>
 <script src="https://kit.fontawesome.com/d1f9bcfe23.js" crossorigin="anonymous"></script>
+<script>
+    new WOW().init();
+</script>
 
 <!-- ! Подключение скриптов -->
 <script src="./js/scroll_header.js"></script>
 <script src="./js/burger.js"></script>
+<script src="./js/smooth_scroll.js"></script>
 </body>
 </html>
